@@ -1,39 +1,45 @@
+// image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D", // Add image URL here
+import { AnimatedTestimonials } from "./ui/animated-testimonials";
 
-const testimonials = [
-    {
-        name: "John Doe",
-        position: "CEO, TechCorp",
-        text: "IT Solutions provided us with top-notch CCTV security and networking services. Their professionalism and expertise are unmatched.",
-    },
-    {
-        name: "Jane Smith",
-        position: "CTO, SecureNet",
-        text: "We've been using their hardware solutions for years, and the performance and reliability have always been outstanding.",
-    },
-    {
-        name: "Mark Johnson",
-        position: "Manager, Digital Systems",
-        text: "The software solutions they developed for our company have streamlined our operations significantly. Highly recommend their services!",
-    },
-];
-
-const Testimonials = () => {
-    return (
-        <section className="py-16 bg-blue-50">
-            <div className="container mx-auto px-6 text-center">
-                <h2 className="text-3xl font-bold text-blue-600 mb-8">What Our Clients Say</h2>
-                <div className="flex flex-wrap justify-center gap-8">
-                    {testimonials.map((testimonial, index) => (
-                        <div key={index} className="bg-white p-6 rounded-lg shadow-lg max-w-xs">
-                            <p className="text-lg text-gray-700 mb-4">{`"${testimonial.text}"`}</p>
-                            <p className="font-semibold text-blue-600">{testimonial.name}</p>
-                            <p className="text-gray-500">{testimonial.position}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-};
+export function Testimonials() {
+    const testimonials = [
+        {
+            quote:
+                "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
+            name: "Sarah Chen",
+            designation: "Product Manager at TechFlow",
+            src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+            quote:
+                "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
+            name: "Michael Rodriguez",
+            designation: "CTO at InnovateSphere",
+            src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+            quote:
+                "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
+            name: "Emily Watson",
+            designation: "Operations Director at CloudScale",
+            src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+            quote:
+                "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
+            name: "James Kim",
+            designation: "Engineering Lead at DataPro",
+            src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+            quote:
+                "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
+            name: "Lisa Thompson",
+            designation: "VP of Technology at FutureNet",
+            src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+    ];
+    return <AnimatedTestimonials testimonials={testimonials} />;
+}
 
 export default Testimonials;
